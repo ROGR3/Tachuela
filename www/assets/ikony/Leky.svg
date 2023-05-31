@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1081 1081" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-4563,-3)">
+        <g transform="matrix(1,0,0,1,1102.15,3.56641)">
+            <rect id="Leky" x="3461.23" y="0" width="1080" height="1080" style="fill:none;"/>
+            <clipPath id="_clip1">
+                <rect id="Leky1" serif:id="Leky" x="3461.23" y="0" width="1080" height="1080"/>
+            </clipPath>
+            <g clip-path="url(#_clip1)">
+                <g transform="matrix(1,0,0,1,3461.23,0)">
+                    <rect x="0" y="0" width="1080" height="1080" style="fill:rgb(219,84,138);"/>
+                </g>
+                <g>
+                    <g transform="matrix(0.707107,-0.707107,0.558737,0.558737,875.295,3079.84)">
+                        <g transform="matrix(1.50623,-1.11022e-16,1.11022e-16,1.50623,-3559.05,-297.038)">
+                            <path d="M4804.11,649.63C4752.28,649.63 4710.19,607.549 4710.19,555.716C4710.19,503.884 4752.28,461.803 4804.11,461.803L5234.55,461.803L5235.15,461.804C5286.71,462.131 5328.46,504.086 5328.46,555.716C5328.46,607.549 5286.38,649.63 5234.55,649.63L4804.11,649.63Z" style="fill:white;stroke:rgb(220,220,220);stroke-width:32.24px;"/>
+                        </g>
+                        <g transform="matrix(1.35738,0,0,1.30205,-3057.7,-166.361)">
+                            <path d="M5172.29,401.044L5427.55,401.044L5428.47,401.047C5506.12,401.539 5569.01,464.733 5569.01,542.5C5569.01,620.572 5505.62,683.956 5427.55,683.956L5172.29,683.956" style="fill:rgb(255,0,26);stroke:rgb(255,59,79);stroke-width:32.24px;stroke-linecap:butt;"/>
+                        </g>
+                    </g>
+                    <g transform="matrix(1,0,0,1,-1088.11,12.1738)">
+                        <path d="M5223.64,284.548C5259.27,254.057 5301.35,219.608 5351.39,221.519" style="fill:none;stroke:rgb(248,215,218);stroke-width:48.55px;"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

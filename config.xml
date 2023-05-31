@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.atzuki.tachuela" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Tachuela</name>
+    <description>Sample Apache Cordova App</description>
+    <author email="atzuki@protonmail.com" href="https://atzuki.netlify.app">
+        Atzuki
+    </author>
+    <icon src="www/assets/logo.png" />
+    <content src="index.html" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+</widget>

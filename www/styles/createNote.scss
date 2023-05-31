@@ -1,0 +1,136 @@
+@import "./addons/vars.scss";
+@import "./addons/globals.scss";
+
+
+#create-container {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .inputFields {
+    background-color: $blue;
+    height: fit-content;
+    width: 90%;
+    border-radius: 1.5rem;
+    border: 6px solid $black;
+    margin: 1rem;
+    padding: 1rem;
+
+    textarea {
+      resize: vertical;
+    }
+
+    .textInput {
+      border: 0;
+      outline: none;
+
+      &:focus {
+        outline: none;
+      }
+
+      background-color: $yellow;
+      border-radius: 1rem;
+      border: 4px solid $black;
+      width: 100%;
+      min-height: 50px;
+      margin: .5rem 0;
+      position: relative;
+      font-family: 'Roboto Mono',
+      monospace;
+      font-size: 1.2rem;
+      padding: .4rem;
+
+      &::placeholder {
+        font-size: 1rem;
+      }
+    }
+
+    .textarea {
+      min-height: 70px;
+      max-height: 200px;
+    }
+
+    button {
+      border: 0;
+      padding: 0;
+
+      background-color: $yellow;
+      border-radius: 1rem;
+      font-family: 'Roboto Mono',
+        monospace;
+      font-size: 1.2rem;
+      padding: .6rem 1rem;
+      font-weight: normal;
+      border: 2px solid black;
+
+      &.selected {
+        border: 4px solid $black;
+        font-weight: bold;
+
+      }
+    }
+
+    .buttons {
+      width: 90%;
+      height: fit-content;
+      position: relative;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    .wider {
+      margin-bottom: .5rem;
+    }
+  }
+
+  h3.needed::before {
+    content: "❖";
+    color: red;
+    margin-right: 3px;
+    position: relative;
+    top: -5px;
+    font-size: .7rem;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 1rem;
+
+    .grid-item {
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 1rem;
+        border: 2px solid $black;
+
+        &.imgSelected {
+          border: 4px solid #000000;
+        }
+      }
+
+
+    }
+
+
+  }
+}
+
+#acceptNote {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  border-radius: 50%;
+  border: 2px solid $black;
+  background-color: $green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  text-align: center;
+}

@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #C1254B;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 500;
+  padding: 1rem 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#base-container {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+}
+#base-container .singleActivity {
+  width: 90%;
+  height: 100px;
+  position: relative;
+  margin: 0.4rem auto;
+}
+#base-container .singleActivity .activityControl {
+  width: 100%;
+  height: 100%;
+  background-color: #32DA7C;
+  border-radius: 1.5rem;
+  border: 6px solid #000000;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#base-container .singleActivity .activityControl .left {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  float: left;
+  border-radius: 1rem;
+  height: 100%;
+  background-color: #DF6582;
+}
+#base-container .singleActivity .activityControl .left .deleteIcon {
+  font-size: 2rem;
+  padding: 1rem;
+  padding-left: 0.8rem;
+}
+#base-container .singleActivity .activityControl .right {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  float: right;
+  border-radius: 1rem;
+  height: 100%;
+  background-color: #32DA7C;
+}
+#base-container .singleActivity .activityControl .right .acceptIcon {
+  position: absolute;
+  right: 0;
+  font-size: 2rem;
+  padding: 1rem;
+  padding-right: 0.8rem;
+}
+#base-container .singleActivity .draggable {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #41B5D7;
+  border-radius: 1.5rem;
+  border: 6px solid #000000;
+  z-index: 1;
+}
+#base-container .singleActivity .draggable .left {
+  height: 100%;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  /* Hide any content that exceeds the dimensions */
+}
+#base-container .singleActivity .draggable .left .activityIcon {
+  border: 0.3rem solid #000000;
+  border-radius: 1rem;
+  width: 88%;
+  height: 88%;
+  position: relative;
+  background-image: url(../assets/ikony/Chleba.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#base-container .singleActivity .draggable .right {
+  display: inline-block;
+  margin: 0.3rem;
+}
+#newNote {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  border: 7px solid #000000;
+  background-color: #41B5D7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#newNote #newNoteImage {
+  width: 83%;
+  height: 83%;
+  background-image: url(../assets/ikony/Mic.svg);
+  border-radius: 50%;
+}/*# sourceMappingURL=index.css.map */

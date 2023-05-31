@@ -1,0 +1,125 @@
+@import "./addons/vars.scss";
+@import "./addons/globals.scss";
+
+
+#base-container {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+
+  .singleActivity {
+    width: 90%;
+    height: 100px;
+    position: relative;
+    margin: .4rem auto;
+
+    .activityControl {
+      width: 100%;
+      height: 100%;
+      background-color: $green;
+      border-radius: 1.5rem;
+      border: 6px solid $black;
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      .left {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        float: left;
+        border-radius: 1rem;
+        height: 100%;
+        background-color: $light-red;
+
+        .deleteIcon {
+          font-size: 2rem;
+          padding: 1rem;
+          padding-left: .8rem;
+        }
+      }
+
+      .right {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        float: right;
+        border-radius: 1rem;
+        height: 100%;
+        background-color: $green;
+
+        .acceptIcon {
+          position: absolute;
+          right: 0;
+          font-size: 2rem;
+          padding: 1rem;
+          padding-right: .8rem;
+        }
+      }
+    }
+
+    .draggable {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background-color: $blue;
+      border-radius: 1.5rem;
+      border: 6px solid $black;
+      z-index: 1;
+
+      .left {
+        height: 100%;
+        float: left;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 88px;
+
+        /* Hide any content that exceeds the dimensions */
+        .activityIcon {
+          border: .3rem solid $black;
+          border-radius: 1rem;
+          width: 88%;
+          height: 88%;
+          position: relative;
+          background-image: url(../assets/ikony/Chleba.svg);
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      }
+
+      .right {
+        display: inline-block;
+        margin: .3rem;
+
+        .activityName {}
+      }
+    }
+
+  }
+}
+
+#newNote {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  border: 7px solid $black;
+  background-color: $blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  #newNoteImage {
+    width: 83%;
+    height: 83%;
+    background-image: url(../assets/ikony/Mic.svg);
+    border-radius: 50%;
+
+  }
+}
