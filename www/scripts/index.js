@@ -1,8 +1,15 @@
 const newNoteBtn = document.getElementById('newNote');
 const dailyNotesDiv = document.querySelector(".dailyNotes")
 const onceNotesDiv = document.querySelector(".onceNotes")
+const settingsBtn = document.querySelector("#openSettings")
+const settingsDiv = document.querySelector("#settings")
+const finishedNotesBtn = document.querySelector("#finishedBtn")
+const deleteMemoryBtn = document.querySelector("#deleteMemoryBtn")
+const saveBtn = document.querySelector("#saveBtn")
+const languageSelect = document.querySelector("#languageSelect")
+
+
 let activities = document.querySelectorAll('.singleActivity');
-let timer;
 let translation = 0;
 let day = (new Date()).getUTCDate()
 const defaultNotes = `[
@@ -136,16 +143,17 @@ function handleActivities() {
         }, 1000)
 
     }
-    document.addEventListener('click', handleOutsideClick);
-    function handleOutsideClick(event) {
-        if (!event.target.closest('.singleActivity')) {
+    document.addEventListener('click', e => {
+        if (!e.target.closest('.singleActivity')) {
             activities.forEach((activity) => {
                 const draggableDiv = activity.querySelector('.draggable');
                 translation = 0;
                 draggableDiv.style.transform = 'translateX(0)';
             });
         }
-    }
+        settingsDiv.style.display = "none"
+        newNoteBtn.style.display = "flex"
+    });
 }
 
 function loadNotes() {
@@ -188,24 +196,49 @@ function handleEmptyLists() {
 }
 
 
-newNoteBtn.addEventListener('touchstart', function () {
-    timer = setTimeout(function () {
-        if (newNoteBtn.href.includes("createNote")) {
-            newNoteBtn.href = newNoteBtn.href.replace("createNote", "finishedNotes")
-            newNoteBtn.children[0].style.backgroundImage = newNoteBtn.children[0].style.backgroundImage.replace("Mic", "Chleba")
-            newNoteBtn.children[0].style.backgroundImage = "url(./assets/ikony/doneNote.svg)"
-        } else {
-            newNoteBtn.href = newNoteBtn.href.replace("finishedNotes", "createNote")
-            newNoteBtn.children[0].style.backgroundImage = "url(./assets/ikony/newNote.svg)"
-        }
-    }, HOLD_INTERVAL);
-});
-newNoteBtn.addEventListener('touchend', function () {
-    clearTimeout(timer);
-});
+
+settingsBtn.addEventListener("click", e => {
+    e.stopPropagation()
+    settingsDiv.style.display = (settingsDiv.style.display == "block" ? "none" : "block")
+    newNoteBtn.style.display = (newNoteBtn.style.display == "none" ? "flex" : "none")
+    let settings = JSON.parse(window.localStorage.getItem("settings") || "{}")
+    languageSelect.value = settings.language
+})
+settingsDiv.addEventListener("click", e => e.stopPropagation())
+finishedNotesBtn.addEventListener("click", e => window.location.href = "./views/finishedNotes.html")
+let willDeleteStorage = false
+deleteMemoryBtn.addEventListener("click", e => {
+    if (deleteMemoryBtn.textContent == "Vymazáno") {
+        deleteMemoryBtn.textContent = "Obnovuje se"
+        willDeleteStorage = false
+        setTimeout(() => {
+            deleteMemoryBtn.textContent = "Obnovena"
+        }, 350)
+
+    } else {
+        deleteMemoryBtn.textContent = "Vymazává se"
+        willDeleteStorage = true
+        setTimeout(() => {
+            deleteMemoryBtn.textContent = "Vymazáno"
+        }, 300)
+    }
+
+})
+saveBtn.addEventListener("click", e => {
+    settingsDiv.style.display = "none"
+    if (willDeleteStorage) {
+        window.localStorage.clear()
+    }
+    let obj = {
+        language: languageSelect.value
+    }
+    window.localStorage.setItem("settings", JSON.stringify(obj))
+    window.location.href = ""
+})
+handleLanguage()
 loadNotes()
 handleActivities()
 
-// setTimeout(function () {
-//     navigator.splashscreen.hide();
-// }, 100);
+setTimeout(function () {
+    navigator.splashscreen.hide();
+}, 150);

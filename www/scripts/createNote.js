@@ -42,6 +42,7 @@ function generateRandomActivity() {
 window.onload = main
 
 function main() {
+  handleLanguage()
   let { name, info } = generateRandomActivity()
   nameInput.placeholder = name
   infoInput.placeholder = info

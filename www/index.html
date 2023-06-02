@@ -15,11 +15,11 @@
 
 <body>
     <div id="base-container">
-        <h3 class="sectionName"> Dnešní úkoly:</h3>
+        <h3 class="sectionName __dailynotes"> Dnešní úkoly:</h3>
         <div class="dailyNotes">
 
         </div>
-        <h3 class="sectionName"> Dlouhodobé úkoly:</h3>
+        <h3 class="sectionName __longtermnotes"> Dlouhodobé úkoly:</h3>
         <div class="onceNotes">
 
         </div>
@@ -29,6 +29,32 @@
     <a id="newNote" href="./views/createNote.html">
         <div id="newNoteImage"></div>
     </a>
+    <div id="openSettings">
+        &#9776;
+    </div>
+    <div id="settings">
+        <h3 class="__language">Jazyk</h3>
+        <div class="selectInput universal">
+            <select id="languageSelect">
+                <option value="cz" class="__cz">Čeština</option>
+                <option value="sk" class="__sk">Slovenština</option>
+                <option value="pl" class="__pl">Polština</option>
+                <option value="en" class="__en">Angličtina</option>
+                <option value="esp" class="__esp">Španělština</option>
+                <option value="de" class="__de">Španělština</option>
+            </select>
+        </div>
+        <h3 class="__showfinishednotes">Zobrazit hotové úkoly</h3>
+        <button class="universal __show" id="finishedBtn">Zobrazit</button>
+        <h3 class="__deletecache">Vymazat mezipamět</h3>
+        <button class="universal __delete" id="deleteMemoryBtn">Vymazat</button>
+
+        <p> <span class="__applicationname"> Název</span>: Tachuela</p>
+        <p> <span class="__version"> Verze</span>: v0.0.1</p>
+        <p>Design: Tom Z Marsu</p>
+
+        <button class="universal bottom __savechanges" id="saveBtn">Uložit</button>
+    </div>
 </body>
 
 </html>
