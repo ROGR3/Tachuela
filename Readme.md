@@ -15,7 +15,7 @@ Tachuela is a powerful mobile checklist app designed to help you stay organized 
 
 ## Website
 
-For more information, visit our [website](https://www.tachuela.netlify.app).
+For more information, visit our [website](https://www.tachuela-app.netlify.app).
 
 ## Download
 
