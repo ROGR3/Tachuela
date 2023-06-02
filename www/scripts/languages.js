@@ -1,0 +1,32 @@
+const LANGUAGES = {
+  en: {
+    __dailynotes: "Daily Notes",
+    __longtermnotes: "Long Term Notes",
+    __language: "Language",
+    __cz: "Czech",
+    __en: "English",
+    __sk: "Slovak",
+    __esp: "Spanish",
+    __showfinishednotes: "Show finished notes",
+    __show: "Show",
+    __deletecache: "Delete cache",
+    __delete: "Delete",
+    __applicationname: "Application name",
+    __version: "Version",
+  },
+  cz: {
+    __dailynotes: "Dnešní úkoly",
+    __longtermnotes: "Dlouhodobé úkoly:",
+    __language: "Jazyk",
+    __cz: "Čeština",
+    __en: "Angličtina",
+    __sk: "Slovenština",
+    __esp: "Španělština",
+    __showfinishednotes: "Zobrazit hotové úkoly",
+    __show: "Zobrazit",
+    __deletecache: "Vymazat mezipamět",
+    __delete: "Vymazat",
+    __applicationname: "Název",
+    __version: "Verze",
+  }
+}
