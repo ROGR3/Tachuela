@@ -22,3 +22,8 @@ let os = getMobileOperatingSystem()
 if (os !== "unknown") {
   document.querySelector("#currentPlatform").innerText = os
 }
+
+function openInNewTab(url) {
+  let win = window.open(url, '_blank');
+  win.focus();
+}
