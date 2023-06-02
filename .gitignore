@@ -3,5 +3,7 @@ platforms/
 *.css.map
 www/styles/addons/*.css
 keystore.keystore
-Tachuela
 build-release.txt
+.env
+Tachuela.apk
+Tachuela.zip

@@ -1,7 +1,7 @@
 {
   "name": "com.atzuki.tachuela",
   "displayName": "Tachuela",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A mobile todo list app for keeping track of your tasks and getting things done efficiently.",
   "main": "index.js",
   "keywords": [
