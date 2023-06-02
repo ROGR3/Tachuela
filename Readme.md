@@ -45,6 +45,6 @@ To install Tachuela, follow these steps:
 
 ## Feedback and Support
 
-We would love to hear your feedback and suggestions to improve Tachuela. 
+I would love to hear your feedback and suggestions to improve Tachuela. Also any kind of contribution is welcome!
 
 Happy organizing and checking off those tasks with Tachuela!
