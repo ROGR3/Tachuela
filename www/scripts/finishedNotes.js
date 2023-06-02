@@ -14,5 +14,6 @@ function loadFinishedNotes() {
 }
 
 document.addEventListener("DOMContentLoaded", e => {
+  handleLanguage()
   loadFinishedNotes()
 })
