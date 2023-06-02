@@ -9,7 +9,6 @@ body {
   background-color: #C1254B;
   font-family: "Roboto Mono", monospace;
   font-weight: 500;
-  padding: 1rem 0;
   min-width: 100%;
   min-height: 100%;
 }
@@ -19,13 +18,32 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 1rem;
+  padding: 1rem 0 8rem;
+}
+#base-container .sectionName {
+  margin-top: 1rem;
+}
+#base-container .dailyNotes {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#base-container .onceNotes {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #base-container .singleActivity {
   width: 90%;
   height: 100px;
   position: relative;
   margin: 0.4rem auto;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
 }
 #base-container .singleActivity .activityControl {
   width: 100%;
@@ -49,7 +67,7 @@ body {
 #base-container .singleActivity .activityControl .left .deleteIcon {
   font-size: 2rem;
   padding: 1rem;
-  padding-left: 0.8rem;
+  padding-left: 1.3rem;
 }
 #base-container .singleActivity .activityControl .right {
   display: flex;
@@ -82,13 +100,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 88px;
+  width: 30%;
   /* Hide any content that exceeds the dimensions */
 }
 #base-container .singleActivity .draggable .left .activityIcon {
   border: 0.3rem solid #000000;
   border-radius: 1rem;
-  width: 88%;
   height: 88%;
   position: relative;
   background-image: url(../assets/ikony/Chleba.svg);
@@ -99,6 +116,29 @@ body {
 #base-container .singleActivity .draggable .right {
   display: inline-block;
   margin: 0.3rem;
+  width: 65%;
+  height: 90%;
+  overflow-x: scroll;
+}
+#base-container .singleActivity .draggable .right::-webkit-scrollbar {
+  display: none;
+}
+#base-container .singleActivity.removed {
+  animation-name: fadeOut;
+}
+#base-container .singleActivity.checked {
+  animation-name: fadeOut;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    height: 0;
+    margin: 0;
+  }
 }
 #newNote {
   width: 100px;
@@ -112,10 +152,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 #newNote #newNoteImage {
   width: 83%;
   height: 83%;
-  background-image: url(../assets/ikony/Mic.svg);
+  background-image: url(../assets/ikony/newNote.svg);
+  background-position: center;
+  background-size: contain;
   border-radius: 50%;
 }/*# sourceMappingURL=index.css.map */

@@ -7,7 +7,28 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 1rem;
+  padding: 1rem 0 8rem;
+
+  .sectionName {
+    margin-top: 1rem;
+
+  }
+
+  .dailyNotes {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .onceNotes {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   .singleActivity {
     width: 90%;
@@ -37,7 +58,7 @@
         .deleteIcon {
           font-size: 2rem;
           padding: 1rem;
-          padding-left: .8rem;
+          padding-left: 1.3rem;
         }
       }
 
@@ -75,13 +96,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 88px;
+        width: 30%;
 
         /* Hide any content that exceeds the dimensions */
         .activityIcon {
           border: .3rem solid $black;
           border-radius: 1rem;
-          width: 88%;
           height: 88%;
           position: relative;
           background-image: url(../assets/ikony/Chleba.svg);
@@ -94,13 +114,42 @@
       .right {
         display: inline-block;
         margin: .3rem;
+        width: 65%;
+        height: 90%;
+        overflow-x: scroll;
 
-        .activityName {}
+        &::-webkit-scrollbar {
+          display: none;
+        }
       }
+    }
+
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+
+    &.removed {
+      animation-name: fadeOut;
+    }
+
+    &.checked {
+      animation-name: fadeOut;
     }
 
   }
 }
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    height: 0;
+    margin: 0;
+  }
+}
+
 
 #newNote {
   width: 100px;
@@ -114,11 +163,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2;
+  user-select: none;
 
   #newNoteImage {
     width: 83%;
     height: 83%;
-    background-image: url(../assets/ikony/Mic.svg);
+    background-image: url(../assets/ikony/newNote.svg);
+    background-position: center;
+    background-size: contain;
     border-radius: 50%;
 
   }

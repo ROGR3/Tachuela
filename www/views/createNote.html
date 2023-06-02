@@ -6,8 +6,9 @@
   <meta name="viewport" content="initial-scale=1.0, width=device-width, viewport-fit=cover">
   <link rel="stylesheet" href="../styles/createNote.css">
   <title>Tachuela</title>
+  <script src="../scripts/globals.js" defer></script>
   <script src="../scripts/createNote.js" defer></script>
-  <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+  <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon">
 </head>
 
 <body>
@@ -17,13 +18,14 @@
   <div id="create-container">
     <div class="textInputs inputFields">
       <h3 class="needed">Chci nezapomenout...</h3>
-      <input type="text" id="nameInput" class="textInput" autocorrect="off" autocapitalize="off" spellcheck="false" />
+      <input type="text" id="nameInput" class="textInput" autocorrect="off" autocapitalize="off" spellcheck="false"
+        maxlength="25" />
       <h3 class="">Jak to popíšu?</h3>
       <textarea id="infoInput" class="textInput textarea" cols="20" rows="5" wrap="hard" maxlength="100"
         autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
       <h3 class="wider">Opakovat</h3>
       <div class="buttons">
-        <button class="repeat-btn selected">Jednou</button>
+        <button class="repeat-btn btnSelected">Jednou</button>
         <button class="repeat-btn">Denně</button>
       </div>
 

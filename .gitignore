@@ -1,4 +1,4 @@
 node_modules/
 platforms/
 *.css.map
-addons/*.css
+www/styles/addons/*.css

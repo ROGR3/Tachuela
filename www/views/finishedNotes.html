@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width, viewport-fit=cover">
+  <link rel="stylesheet" href="../styles/index.css">
+  <style>
+    .marked {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      z-index: 1;
+      right: 20px;
+      bottom: 15px;
+    }
+  </style>
+  <title>Tachuela</title>
+  <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon">
+  <script src="../scripts/globals.js" defer></script>
+  <script src="../scripts/finishedNotes.js"></script>
+</head>
+
+<body>
+  <div id="base-container">
+    <h3 class="sectionName"> Splněné úkoly:</h3>
+    <div class="dailyNotes"></div>
+    <h3 class="sectionName">Splněné cíle:</h3>
+    <div class="onceNotes"></div>
+    <!-- </KONTAINER> -->
+  </div>
+
+  <a id="newNote" href="../index.html">
+    <div id="newNoteImage" style="background-image: url(../assets/ikony/doneNote.svg);"></div>
+  </a>
+</body>
+
+</html>

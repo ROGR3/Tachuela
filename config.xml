@@ -1,7 +1,16 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.atzuki.tachuela" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Tachuela</name>
-    <description>Sample Apache Cordova App</description>
+    <platform name="android">
+        <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/screen/android/logo.png" />
+        <preference name="SplashScreenDelay" value="-1" />
+    </platform>
+    <platform name="ios">
+        <splash src="res/screen/ios/logo.png" />
+        <preference name="FadeSplashScreenDuration" value="0"/>
+        <preference name="ShowSplashScreenSpinner" value="false"/>
+    </platform>
+    <description>Mobile todo list app for keeping track of your tasks</description>
     <author email="atzuki@protonmail.com" href="https://atzuki.netlify.app">
         Atzuki
     </author>

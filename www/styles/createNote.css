@@ -10,7 +10,6 @@ body {
   background-color: #C1254B;
   font-family: "Roboto Mono", monospace;
   font-weight: 500;
-  padding: 1rem 0;
   min-width: 100%;
   min-height: 100%;
 }
@@ -72,7 +71,7 @@ body {
   font-weight: normal;
   border: 2px solid black;
 }
-#create-container .inputFields button.selected {
+#create-container .inputFields button.btnSelected {
   border: 4px solid #000000;
   font-weight: bold;
 }
@@ -101,6 +100,11 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   margin-top: 1rem;
+  max-height: 300px;
+  overflow-x: scroll;
+}
+#create-container .grid-container::-webkit-scrollbar {
+  display: none;
 }
 #create-container .grid-container .grid-item img {
   max-width: 100%;
@@ -116,7 +120,7 @@ body {
   width: 50px;
   height: 50px;
   position: fixed;
-  top: 20px;
+  bottom: 20px;
   right: 20px;
   border-radius: 50%;
   border: 2px solid #000000;
@@ -126,4 +130,5 @@ body {
   justify-content: center;
   z-index: 2;
   text-align: center;
+  font-size: 1.5rem;
 }/*# sourceMappingURL=createNote.css.map */
