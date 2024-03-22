@@ -21,13 +21,13 @@ For more information, visit our [website](https://tachuela.pages.dev/).
 
 You can download the Tachuela app for Android devices from the following link:
 
-[Download Tachuela APK](https://github.com/Borecjeborec1/Tachuela/releases/download/v1.0.0/Tachuela.apk)
+[Download Tachuela APK](https://github.com/ROGR3/Tachuela/releases/download/v1.0.0/Tachuela.apk)
 
 ## Installation
 
 To install Tachuela, follow these steps:
 
-1. Download the APK file from the [download link](https://github.com/Borecjeborec1/Tachuela/releases/download/v1.0.0/Tachuela.apk).
+1. Download the APK file from the [download link](https://github.com/ROGR3/Tachuela/releases/download/v1.0.0/Tachuela.apk).
 2. Enable installation from unknown sources in your device settings.
 3. Locate the downloaded APK file and tap on it.
 4. Follow the on-screen instructions to complete the installation.
